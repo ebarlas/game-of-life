@@ -46,8 +46,10 @@ int main(int argc, const char **argv) {
             }
         }
 
-        if (++frames % framesPerUpdate == 0)
+        frames = (frames + 1) % framesPerUpdate;
+        if (frames == 0)
             game.update();
+
         game.render();
 
         SDL_RenderPresent(ren);
