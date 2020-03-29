@@ -17,7 +17,8 @@ namespace gameoflife {
         [[nodiscard]] int getRows() const;
         [[nodiscard]] int getColumns() const;
         [[nodiscard]] bool get(int row, int col) const;
-        void set(int row, int col);private:
+        void set(int row, int col);
+    private:
         static constexpr int BITS_PER_GROUP = 32;
         using group_type = std::uint_least32_t;
         struct BitGroup {
